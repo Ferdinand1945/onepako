@@ -51,8 +51,8 @@ function LoginForm(props) {
         props.history.push('/home');
     }
     const redirectToRegister = () => {
-        props.history.push('/register'); 
-        props.updateTitle('Register');
+        props.history.push('/home');
+        props.updateTitle('Home');
     }
     return(
         <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
@@ -92,7 +92,7 @@ function LoginForm(props) {
             </div>
             <div className="registerMessage">
                 <span>Dont have an account? </span>
-                <span className="loginText" onClick={() => redirectToRegister()}>Register</span> 
+                <span className="loginText" onClick={() => redirectToRegister()}>Home</span>
             </div>
         </div>
     )
