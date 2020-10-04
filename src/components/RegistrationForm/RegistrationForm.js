@@ -110,7 +110,7 @@ function RegistrationForm(props) {
                 {state.successMessage}
             </div>
             <div className="mt-2">
-                <span>Already have an account? </span>
+                <span>Navigate to </span>
                 <span className="loginText" onClick={() => redirectToLogin()}>Login here</span> 
             </div>
             
