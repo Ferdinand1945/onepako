@@ -2,7 +2,7 @@ import React,{ useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import { ACCESS_TOKEN_NAME, API_BASE_URL } from '../../constants/apiContants';
 import axios from 'axios'
-import {Col, Container} from 'reactstrap';
+import {Container} from 'reactstrap';
 function Home(props) {
     useEffect(() => {
         axios.get(API_BASE_URL+'/user/me', { headers: { 'token': localStorage.getItem(ACCESS_TOKEN_NAME) }})
@@ -25,23 +25,23 @@ function Home(props) {
                 <div className="row row-offcanvas row-offcanvas-left">
                     <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
                         <ul className="nav flex-column sticky-top pl-0 pt-5 mt-3">
-                            <li className="nav-item"><a className="nav-link" href="#">Overview</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/home">Overview</a></li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#submenu1" data-toggle="collapse"
+                                <a className="nav-link" href="/home" data-toggle="collapse"
                                    data-target="#submenu1">Reports▾</a>
                                 <ul className="list-unstyled flex-column pl-3 collapse" id="submenu1"
                                     aria-expanded="false">
-                                    <li className="nav-item"><a className="nav-link" href="">Report 1</a></li>
-                                    <li className="nav-item"><a className="nav-link" href="">Report 2</a></li>
+                                    <li className="nav-item"><a className="nav-link" href="/home">Report 1</a></li>
+                                    <li className="nav-item"><a className="nav-link" href="/home">Report 2</a></li>
                                 </ul>
                             </li>
-                            <li className="nav-item"><a className="nav-link" href="#">Analytics</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Export</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Snippets</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Flexbox</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Layouts</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Templates</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Themes</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/home">Analytics</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/home">Export</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/home">Snippets</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/home">Flexbox</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/home">Layouts</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/home">Templates</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/home">Themes</a></li>
                         </ul>
                     </div>
 
@@ -137,9 +137,6 @@ function Home(props) {
                             </div>
                         </div>
 
-                        <a id="features">
-
-                        </a>
                         <hr/>
                         <p className="lead mt-5">
                             Are you ready for Bootstap 4? It's the 4th generation of this popular responsive
@@ -152,12 +149,12 @@ function Home(props) {
                             <div className="col-lg-3 col-md-4">
                                 <div className="card">
                                     <img className="card-img-top img-fluid"
-                                         src="//placehold.it/740x180/bbb/fff?text=..." alt="Card image cap"/>
+                                         src="//placehold.it/740x180/bbb/fff?text=..." alt="1"/>
                                     <div className="card-body">
                                         <h4 className="card-title">Layouts</h4>
                                         <p className="card-text">Flexbox provides simpler, more flexible
                                             layout options like vertical centering.</p>
-                                        <a href="#" className="btn btn-primary">Button</a>
+                                        <a href="/home" className="btn btn-primary">Button</a>
                                     </div>
                                 </div>
                                 <div className="card card-inverse bg-inverse mt-3">
@@ -165,7 +162,7 @@ function Home(props) {
                                         <h3 className="card-title">Flexbox</h3>
                                         <p className="card-text">Flexbox is now the default, and Bootstrap 4
                                             supports SASS out of the box.</p>
-                                        <a href="#" className="btn btn-outline-secondary">Outline</a>
+                                        <a href="/home" className="btn btn-outline-secondary">Outline</a>
                                     </div>
                                 </div>
                             </div>
@@ -252,9 +249,7 @@ function Home(props) {
                         </div>
 
 
-                        <a id="more">
 
-                        </a>
                         <hr />
                         <h2 className="sub-header mt-5">Use card decks for equal height rows of cards</h2>
                         <div className="mb-3">
@@ -302,8 +297,6 @@ function Home(props) {
                             </div>
                         </div>
 
-
-                        <a id="flexbox"></a>
                         <hr/>
                         <h2 className="mt-5">Masonry-style grid columns</h2>
                         <h6>with Bootstrap 4 flexbox</h6>
@@ -311,7 +304,7 @@ function Home(props) {
                         <div className="card-columns mb-3">
                             <div className="card">
                                 <img className="card-img-top img-fluid"
-                                     src="//placehold.it/600x200/444/fff?text=..." alt="Card image cap"/>
+                                     src="//placehold.it/600x200/444/fff?text=..." alt="2"/>
                                 <div className="card-body">
                                     <h4 className="card-title">New XL Grid Tier</h4>
                                     <p className="card-text">With screens getting smaller, Bootstrap
@@ -335,7 +328,7 @@ function Home(props) {
                             </div>
                             <div className="card">
                                 <img className="card-img-top img-fluid"
-                                     src="//placehold.it/600x200/bbb/fff?text=..." alt="Card image cap"/>
+                                     src="//placehold.it/600x200/bbb/fff?text=..." alt="Card "/>
                                 <div className="card-body">
                                     <h4 className="card-title">Card title</h4>
                                     <p className="card-text">This card has supporting text below as
@@ -365,7 +358,7 @@ function Home(props) {
                             </div>
                             <div className="card">
                                 <img className="card-img img-fluid"
-                                     src="//placehold.it/600x200/777/fff?text=..." alt="Card image"/>
+                                     src="//placehold.it/600x200/777/fff?text=..." alt="Card 2"/>
                             </div>
                             <div className="card card-body text-right">
                                 <blockquote className="card-blockquote">
@@ -422,11 +415,6 @@ function Home(props) {
                                     mins ago</small></p>
                             </div>
                         </div>
-
-
-                        <a id="layouts">
-
-                        </a>
                         <hr/>
                         <h2 className="sub-header mt-5">Interesting layouts and elements</h2>
                         <div className="row mb-3">
@@ -452,19 +440,19 @@ function Home(props) {
 
                                 <ul className="nav nav-tabs" role="tablist">
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#home1" role="tab"
+                                        <a className="nav-link active" href="/home" role="tab"
                                            data-toggle="tab">Home</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#profile1" role="tab"
+                                        <a className="nav-link" href="/home" role="tab"
                                            data-toggle="tab">Profile</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#messages1" role="tab"
+                                        <a className="nav-link" href="/home" role="tab"
                                            data-toggle="tab">Messages</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#settings1" role="tab"
+                                        <a className="nav-link" href="/home" role="tab"
                                            data-toggle="tab">Settings</a>
                                     </li>
                                 </ul>
