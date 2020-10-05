@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { ACCESS_TOKEN_NAME, API_BASE_URL } from '../../constants/apiContants';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faAddressCard, faBiking, faChartPie, faCoffee, faCog, faUser} from '@fortawesome/free-solid-svg-icons';
+import {faAddressCard, faBiking, faChartPie, faCog, faUser} from '@fortawesome/free-solid-svg-icons';
 import {faDashcube} from "@fortawesome/free-brands-svg-icons";
 
 
