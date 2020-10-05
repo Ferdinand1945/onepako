@@ -1,7 +1,12 @@
 import React,{ useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import { ACCESS_TOKEN_NAME, API_BASE_URL } from '../../constants/apiContants';
-import axios from 'axios'
+import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faAddressCard, faBiking, faChartPie, faCoffee, faCog, faUser} from '@fortawesome/free-solid-svg-icons';
+import {faDashcube} from "@fortawesome/free-brands-svg-icons";
+
+
 function Home(props) {
     useEffect(() => {
         axios.get(API_BASE_URL+'/user/me', { headers: { 'token': localStorage.getItem(ACCESS_TOKEN_NAME) }})
@@ -22,11 +27,11 @@ function Home(props) {
             <div className="row row-offcanvas row-offcanvas-left">
                 <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0 text-left" id="sidebar" role="navigation">
                     <ul className="nav flex-column sticky-top pl-0 pt-5 mt-3">
-                        <li className="nav-item"><a className="nav-link" href="/home">Dashboard</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/home">Users</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/home"><FontAwesomeIcon icon={faDashcube} /> Dashboard</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/home"><FontAwesomeIcon icon={faUser} /> Users</a></li>
                         <li className="nav-item">
                             <a className="nav-link" href="/home" data-toggle="collapse"
-                               data-target="#submenu1">Customers▾</a>
+                               data-target="#submenu1"><FontAwesomeIcon icon={faAddressCard} /> Customers▾</a>
                             <ul className="list-unstyled flex-column pl-3 collapse" id="submenu1"
                                 aria-expanded="false">
                                 <li className="nav-item"><a className="nav-link" href="/home">All Users</a></li>
@@ -35,7 +40,7 @@ function Home(props) {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/home" data-toggle="collapse"
-                               data-target="#submenu2">Courier▾</a>
+                               data-target="#submenu2"><FontAwesomeIcon icon={faBiking} /> Courier▾</a>
                             <ul className="list-unstyled flex-column pl-3 collapse" id="submenu2"
                                 aria-expanded="false">
                                 <li className="nav-item"><a className="nav-link" href="/home">All Users</a></li>
@@ -44,7 +49,7 @@ function Home(props) {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/home" data-toggle="collapse"
-                               data-target="#submenu3">Statics▾</a>
+                               data-target="#submenu3"><FontAwesomeIcon icon={faChartPie} /> Statics▾</a>
                             <ul className="list-unstyled flex-column pl-3 collapse" id="submenu3"
                                 aria-expanded="false">
                                 <li className="nav-item"><a className="nav-link" href="/home">Revenew</a></li>
@@ -52,7 +57,7 @@ function Home(props) {
                                 <li className="nav-item"><a className="nav-link" href="/home">Taxes</a></li>
                             </ul>
                         </li>
-                        <li className="nav-item"><a className="nav-link" href="/home">Settings</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/home"><FontAwesomeIcon icon={faCog} /> Settings</a></li>
                     </ul>
                 </div>
 
