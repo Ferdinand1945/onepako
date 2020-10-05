@@ -27,10 +27,10 @@ function Home(props) {
             <div className="row row-offcanvas row-offcanvas-left">
                 <div className="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0 text-left" id="sidebar" role="navigation">
                     <ul className="nav flex-column sticky-top pl-0 pt-5 mt-3">
-                        <li className="nav-item"><a className="nav-link" href="/home"><FontAwesomeIcon icon={faDashcube} /> Dashboard</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/home"><FontAwesomeIcon icon={faUser} /> Users</a></li>
+                        <li className="nav-item"><a className="nav-link text-dark" href="/home"><FontAwesomeIcon icon={faDashcube} /> Dashboard</a></li>
+                        <li className="nav-item"><a className="nav-link text-dark" href="/home"><FontAwesomeIcon icon={faUser} /> Users</a></li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/home" data-toggle="collapse"
+                            <a className="nav-link text-dark" href="/home" data-toggle="collapse"
                                data-target="#submenu1"><FontAwesomeIcon icon={faAddressCard} /> Customers▾</a>
                             <ul className="list-unstyled flex-column pl-3 collapse" id="submenu1"
                                 aria-expanded="false">
@@ -39,16 +39,16 @@ function Home(props) {
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/home" data-toggle="collapse"
+                            <a className="nav-link text-dark" href="/home" data-toggle="collapse"
                                data-target="#submenu2"><FontAwesomeIcon icon={faBiking} /> Courier▾</a>
                             <ul className="list-unstyled flex-column pl-3 collapse" id="submenu2"
                                 aria-expanded="false">
-                                <li className="nav-item"><a className="nav-link" href="/home">All Users</a></li>
-                                <li className="nav-item"><a className="nav-link" href="/home">Add New</a></li>
+                                <li className="nav-item"><a className="nav-link text-dark" href="/home">All Users</a></li>
+                                <li className="nav-item"><a className="nav-link text-dark" href="/home">Add New</a></li>
                             </ul>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/home" data-toggle="collapse"
+                            <a className="nav-link text-dark" href="/home" data-toggle="collapse"
                                data-target="#submenu3"><FontAwesomeIcon icon={faChartPie} /> Statics▾</a>
                             <ul className="list-unstyled flex-column pl-3 collapse" id="submenu3"
                                 aria-expanded="false">
@@ -57,7 +57,7 @@ function Home(props) {
                                 <li className="nav-item"><a className="nav-link" href="/home">Taxes</a></li>
                             </ul>
                         </li>
-                        <li className="nav-item"><a className="nav-link" href="/home"><FontAwesomeIcon icon={faCog} /> Settings</a></li>
+                        <li className="nav-item"><a className="nav-link text-dark" href="/home"><FontAwesomeIcon icon={faCog} /> Settings</a></li>
                     </ul>
                 </div>
 
